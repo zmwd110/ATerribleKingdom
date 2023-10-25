@@ -44,7 +44,7 @@ public class ReplaceSelection : ScriptableWizard
 			return;
 
 		Transform[] transforms = Selection.GetTransforms(
-			SelectionMode.TopLevel | SelectionMode.OnlyUserModifiable);
+			SelectionMode.TopLevel | SelectionMode.Editable);
 
 
 		foreach (Transform t in transforms)
