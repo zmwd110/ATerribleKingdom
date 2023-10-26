@@ -18,4 +18,6 @@ public class MyDialogueClip : PlayableAsset, ITimelineClipAsset
     
     return playable;
   }
+
+  
 }

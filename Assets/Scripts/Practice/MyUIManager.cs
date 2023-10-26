@@ -10,6 +10,7 @@ public class MyUIManager : MonoBehaviour
   [SerializeField] GameObject DialogueUI;
   [SerializeField] TextMeshProUGUI Content;
   [SerializeField] TextMeshProUGUI CharacterName;
+  [SerializeField] TextMeshProUGUI PauseTxT;
 
   public static MyUIManager Instance { get; private set; }
 
@@ -44,10 +45,24 @@ public class MyUIManager : MonoBehaviour
 
   }
 
+
   public void SetDialog(string name, string content)
   {
     DialogueUI.SetActive(true);
     CharacterName.text = name;
     Content.text = content;
+    //显示是否要暂停
+    PauseTxT.gameObject.SetActive(false);
+  }
+
+  public void ShowPauseTxt()
+  {
+    //显示是否要暂停
+    PauseTxT.gameObject.SetActive(true);
+  }
+
+  public void HideDialog()
+  {
+    DialogueUI.SetActive(false);
   }
 }
