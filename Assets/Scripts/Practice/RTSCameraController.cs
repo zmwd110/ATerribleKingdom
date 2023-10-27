@@ -17,6 +17,6 @@ public class RTSCameraController : MonoBehaviour
     var horizontal = Input.GetAxis("CameraHorizontal");
     var vertical = Input.GetAxis("CameraVertical");
 
-    DummyFollow.position += new Vector3 (horizontal, 0, vertical) * (Time.deltaTime * speed);
+    DummyFollow.position += new Vector3 (vertical, 0, -horizontal) * (Time.deltaTime * speed);
   }
 }

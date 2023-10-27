@@ -67,6 +67,7 @@ public class MyDialogueBehaviour : PlayableBehaviour
   public override void OnGraphStart(Playable playable)
   {
     //Debug.Log("GraphStart");
+    MyUIManager.Instance.HideDialog();
   }
 
   public override void OnPlayableCreate(Playable playable)
